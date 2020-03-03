@@ -1,0 +1,14 @@
+@import './color.scss';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+div {
+    box-sizing: border-box;
+}
+#user,#search,#recommend,#singer,#rank,#mine {
+    padding-top: 80px;
+}

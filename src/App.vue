@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Mheader/>
+    <HNav/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,21 +10,18 @@
 export default {
   name: 'App',
   components: {
-    Mheader: () => import('./components/Mheader/mheader'),
+    HNav: () => import('./views/Nav/h_nav')
   },
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './base/scss/index.scss';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #FF4500;
-}
-* {
-  margin: 0;
-  padding: 0;
+  background-color: #f2f3f4;
 }
 </style>
