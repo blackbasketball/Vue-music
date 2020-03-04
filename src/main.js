@@ -6,9 +6,12 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import fastclick from 'fastclick'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false
-Vue.use(ElementUI);
+Vue.use(ElementUI)
+Vue.use(VueAxios,axios)
 
 fastclick.attach(document.body)
 /* eslint-disable no-new */
