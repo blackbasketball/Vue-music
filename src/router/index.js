@@ -12,7 +12,10 @@ export default new Router({
     },
     {
       path: '/user',
-      component: () => import('../components/User/user')
+      component: () => import('../components/User/user'),
+      meta: {
+        title: '用户'
+      }
     },
     {
       path: '/search',
@@ -33,6 +36,13 @@ export default new Router({
     {
       path: '/mine',
       component: () => import('../components/Mine/mine')
+    },
+    {
+      path: '/playlist',
+      component: () => import('../views/playlist/playlist'),
+      meta: {
+        title: '歌单列表'
+      }
     }
   ]
 })

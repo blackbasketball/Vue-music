@@ -1,6 +1,7 @@
 <template>
   <div id="recommend">
     <Banner/>
+    <Rtab/>
   </div>
 </template>
 
@@ -15,12 +16,13 @@ export default {
   methods: {
   },
   components: {
-      Banner: () =>import('./banner')
+      Banner: () =>import('./banner'),
+      Rtab: () =>import('./R_tab')
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/base/scss/color.scss";
 
 </style>

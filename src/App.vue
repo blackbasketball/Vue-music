@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HNav />
+    <HNav v-if = "status" />
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -10,8 +10,18 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      status: true,
+    }
+  },
   components: {
     HNav: () => import("./views/Nav/h_nav")
+  },
+  watch: {
+    $route() {
+      this.status = this.$store.state.Path.indexOf(this.$route.path) + 1
+    }
   }
 };
 </script>
@@ -23,6 +33,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #f2f3f4;
+  background-color: #f4f5f6;
 }
 </style>

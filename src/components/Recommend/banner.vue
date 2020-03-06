@@ -26,11 +26,10 @@ export default {
       .then(({ data: { banners = [] } }) => {
         let img = banners.map(a => a.imageUrl);
         this.imgUrl = img;
-        console.log("success");
       })
       .catch(error => {
         console.log(error);
-        console.log("请求失败了");
+        console.log("banner请求失败了");
       });
   }
 };
