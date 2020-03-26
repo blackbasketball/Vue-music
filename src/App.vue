@@ -4,6 +4,7 @@
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+    <PlayMusic/>
   </div>
 </template>
 
@@ -16,7 +17,8 @@ export default {
     }
   },
   components: {
-    HNav: () => import("./views/Nav/h_nav")
+    HNav: () => import("./views/Nav/h_nav"),
+    PlayMusic: () => import("./components/Playmusic/playMusic")
   },
   watch: {
     $route() {

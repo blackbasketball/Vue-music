@@ -42,7 +42,11 @@ export default new Router({
       component: () => import('../views/playlist/playlist'),
       meta: {
         title: '歌单列表'
-      }
-    }
+      },
+    },
+    {
+      path: '/single/:id',
+      component: () => import('../views/playlist/single'),
+    },
   ]
 })
