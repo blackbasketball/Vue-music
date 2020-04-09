@@ -19,5 +19,6 @@ export default {
     #h_nav {
         position: fixed;
         width: 100%;
+        z-index: 99999999;
     }
 </style>

@@ -2,7 +2,7 @@
     <div id='playlist'>
         <div class='list_head'>
             <h2>
-                <i class='el-icon-back' @click="goBack"></i>
+                <i class='el-icon-arrow-left' @click="goBack"></i>
                 <span>歌单花园</span>
             </h2>
         </div>
@@ -62,11 +62,13 @@ export default {
     color: $color_text;
     z-index: 999;
 }
-.list_head .el-icon-back {
-    font-size: 30px;
+.list_head .el-icon-arrow-left {
+    font-size: 24px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%)
+    font-weight: 600;
+    transform: translateY(-50%);
+    left: 10px;
 }
 .list_head span {
     font-size: 20px;

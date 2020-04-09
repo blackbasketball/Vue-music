@@ -5,7 +5,7 @@
             </div>
             <div class='list_head' :style="{ background: ImgColor }">
                 <h2>
-                    <i class='el-icon-back' @click='goBack'></i>
+                    <i class='el-icon-arrow-left' @click='goBack'></i>
                     <span>歌单</span>
                 </h2>
             </div>
@@ -21,7 +21,6 @@
                 <li :key="item.id" @click="SongDetail(item.id)">
                     <h4>{{ item.name }}</h4>
                     <span>{{ item.ar[0].name }}</span>
-                    <i class="el-icon-video-play"></i>
                 </li>
             </template>
         </ul>
@@ -106,11 +105,13 @@ export default {
     z-index: 999;
     // background-color: rgba($color: #000000, $alpha: 0.2)
 }
-.list_head .el-icon-back {
-    font-size: 30px;
+.list_head .el-icon-arrow-left {
+    font-size: 24px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%)
+    font-weight: 600;
+    left: 10px;
+    transform: translateY(-50%);
 }
 .list_head span {
     font-size: 20px;
@@ -146,7 +147,6 @@ export default {
 }
 .songList {
     padding-top: 10px;
-    background-color:#ffffff;
 }
 .songList li {
     list-style: none;

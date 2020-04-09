@@ -1,6 +1,11 @@
 <template>
     <div id="singer">
         <h3>热门</h3>
+        <ul>
+            <li v-for="item in singerList" :key="item.id">
+                {{ item.name }}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -21,6 +26,7 @@ export default {
         _getSingerList() {
             getSingerList().then(res => {
                 console.log(res.data.artists)
+                this.singerList = res.data.artists
             }).catch(error => {
                 console.log(error)
             })

@@ -56,7 +56,7 @@ export default {
   top: 48px;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 99999;
   background-color: $color_router;
   .el-col {
     text-align: center;

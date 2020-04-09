@@ -62,7 +62,7 @@ export default {
         height: 48px;
         background-color: rgba($color: #EEEEEE, $alpha: 0.9);
         box-shadow: 0 -3px 5px rgba($color: #000000, $alpha: 0.2);
-        z-index: 999;
+        z-index: 99999;
         .playImg {
             width: 40px;
             height: 40px;
